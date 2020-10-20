@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    xmlns:tools="http://schemas.android.com/tools"
+    <!-- Data to make available to the XML via data binding. In this case,
+            the whole ViewModel, so that we can access the LiveData,
+            click handlers, and state variables. -->
+    <data xmlns:android="http://schemas.android.com/apk/res/android">
+        <variable
+            name="kategoryViewModel"
+            type="com.example.ostoslista.KategoryViewModel" />
+    </data>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,3 +22,4 @@
         android:text="Kategory fragment" />
 
 </FrameLayout>
+</layout>

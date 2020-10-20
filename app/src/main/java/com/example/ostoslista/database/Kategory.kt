@@ -6,7 +6,8 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "kategory_table")
 data class Kategory (    //SSL huom, tässä piti sulut muuttaa erilaiseksi {} -> ()
     @PrimaryKey(autoGenerate = true)
-    var kategoryId :Int = 0,
+    //var kategoryId :Int = 0,
+    var kategoryId :Long = 0L, //SSL 12.10.2020 kokeillaan johtuiko kaatuminen että oli Int
 
     @ColumnInfo(name = "kategoryName")
     val kategoryName: String = "",
