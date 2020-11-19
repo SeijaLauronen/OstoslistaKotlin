@@ -74,7 +74,7 @@ abstract class ProductDatabase :RoomDatabase(){
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         ProductDatabase::class.java, // 11.10.2020 SSL HUOM tänne oikea luokan nimi
-                        "sleep_history_database"
+                        "product_database" //19.11.2020 SSL sleep_history_database -> product_database
                     )
                         // Wipes and rebuilds instead of migrating if no Migration object.
                         // Migration is not part of this lesson. You can learn more about

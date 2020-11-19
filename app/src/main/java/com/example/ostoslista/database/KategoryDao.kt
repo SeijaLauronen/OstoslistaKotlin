@@ -1,6 +1,6 @@
 package com.example.ostoslista.database
 
-//SSL 11.10.2020 impotiy kopsattu mallista
+//SSL 11.10.2020 importit kopsattu mallista
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
@@ -12,6 +12,13 @@ import androidx.room.Update
  */
 @Dao //SSL: tämä pitää muistaa laittaa!!
 interface KategoryDao {
+
+    //19.11.2020 SSL
+    @Query("INSERT INTO kategory_table (kategoryId, kategoryName, kategoryOrder, kategoryInUse) " +
+            "VALUES (:kid, :kname, :korder,  :kinuse);")
+    fun insertKategory(kid:Int, kname: String, korder:Int, kinuse:Boolean)
+
+
     @Insert
     suspend fun insert(night: Kategory)
 
