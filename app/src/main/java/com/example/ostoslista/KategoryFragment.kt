@@ -22,6 +22,8 @@ import androidx.lifecycle.Observer
 
 import com.example.ostoslista.R
 import com.example.ostoslista.database.ProductDatabase
+import com.example.ostoslista.databinding.KategoryFragmentBinding
+
 //import com.example.ostoslista.databinding.FragmentKategoryBinding
 //import com.google.android.material.snackbar.Snackbar
 
@@ -41,14 +43,13 @@ class KategoryFragment : Fragment() {
     ): View? {
     //SSL 11.10. TODO:
         /*
-        val binding: FragmentKategoryBinding = DataBindingUtil.inflate(
-            inflater, R.layout.kategory_fragment,container,false)
-        */
-        /*
         // Get a reference to the binding object and inflate the fragment views.
         val binding: FragmentSleepTrackerBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_sleep_tracker, container, false)
         */
+        //19.11.2020 jee, sainpas tuon bindingin tehtyä!
+        val binding: KategoryFragmentBinding =
+        DataBindingUtil.inflate(inflater, R.layout.kategory_fragment,container,false)
 
         // 19.11.2020 SSL Create an instance of the ViewModel Factory.
         val application = requireNotNull(this.activity).application
